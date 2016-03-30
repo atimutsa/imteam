@@ -1,0 +1,10 @@
+@import "header";
+@import "sandwich";
+
+.logo {
+  background: url("../img/logo.png") center 0 no-repeat;
+  @include size(95px 46px);
+  &.white {
+    background: url("../img/logo-white.png") center 0 no-repeat;
+  }
+}

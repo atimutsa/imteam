@@ -4,4 +4,12 @@
 @import "compass/reset";
 @import "sprite/*.png";
 @include all-sprite-sprites;
+@import "utilities/index";
 @import "layout/index";
+@import "modules/index";
+
+#section1 {
+  .pp-tableCell {
+    vertical-align: baseline;
+  }
+}

@@ -78,4 +78,87 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #section1 {
   background: url("../img/header-bg.jpg") center 0 repeat fixed;
   background-size: cover;
+  padding-top: 20px;
+}
+
+/* line 3, ../scss/layout/_index.scss */
+section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* line 1, ../scss/modules/_sandwich.scss */
+#nav-icon {
+  width: 20px;
+  height: 18px;
+  margin: 30px 22px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+/* line 9, ../scss/modules/_sandwich.scss */
+#nav-icon span {
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+/* line 20, ../scss/modules/_sandwich.scss */
+#nav-icon span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+/* line 24, ../scss/modules/_sandwich.scss */
+#nav-icon span:nth-child(2) {
+  top: 7px;
+  transform-origin: left center;
+}
+/* line 28, ../scss/modules/_sandwich.scss */
+#nav-icon span:nth-child(3) {
+  top: 14px;
+  transform-origin: left center;
+}
+/* line 35, ../scss/modules/_sandwich.scss */
+#nav-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 3px;
+}
+/* line 40, ../scss/modules/_sandwich.scss */
+#nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+/* line 44, ../scss/modules/_sandwich.scss */
+#nav-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 14px;
+  left: 3px;
+}
+
+/* line 4, ../scss/modules/_index.scss */
+.logo {
+  background: url("../img/logo.png") center 0 no-repeat;
+  height: 46px;
+  width: 95px;
+}
+/* line 7, ../scss/modules/_index.scss */
+.logo.white {
+  background: url("../img/logo-white.png") center 0 no-repeat;
+}
+
+/* line 12, ../scss/style.scss */
+#section1 .pp-tableCell {
+  vertical-align: baseline;
 }
