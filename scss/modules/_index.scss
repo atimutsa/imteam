@@ -2,9 +2,54 @@
 @import "sandwich";
 
 .logo {
+  display: block;
   background: url("../img/logo.png") center 0 no-repeat;
   @include size(95px 46px);
   &.white {
     background: url("../img/logo-white.png") center 0 no-repeat;
   }
+}
+.menu {
+  font: bold 14px "LatoBold", Arial, san-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn {
+  @include border-radius(21px);
+  border: 2px #000000 solid;
+  color: $btn-txt-color;
+  font: normal 13px "LatoRegular", Arial, sans-serif;
+  margin: 38px auto;
+  width: auto;
+  padding: 12px 24px 0;
+  height: 26px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  @include transition(all 0.3s linear);
+  &:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+  &.white {
+    color: #ffffff;
+    border-color: #eeeeee;
+    &:hover {
+      background: #ffffff;
+      color: $btn-txt-color;
+    }
+  }
+}
+.center {
+  text-align: center;
+}
+.scroll-down {
+  @include size(50px 154px);
+  background: url("../img/scroll-down.png") center 0 no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -25px;
 }

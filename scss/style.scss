@@ -10,6 +10,36 @@
 
 #section1 {
   .pp-tableCell {
-    vertical-align: baseline;
+//    vertical-align: baseline;
+  }
+  header {
+    @include clearfix;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 0 15px;
+    @include box-sizing(border-box);
+    .logo {
+      float: left;
+    }
+    .menu {
+      float: right;
+      line-height: 46px;
+      right: 0;
+    }
+    #nav-icon {
+      margin: 14px 0 0 10px;
+    }
+  }
+  .main-header {
+    text-align: center;
+    color: #ffffff;
+    font: 300 16px "OpenSansLight", Arial, san-serif;
+    max-width: 630px;
+    margin: 0 auto 0;
+    h1 {
+      font: bold 36px "LatoBold", Arial, san-serif;
+      margin-bottom: 30px;
+    }
   }
 }

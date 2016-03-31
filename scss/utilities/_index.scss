@@ -1,3 +1,4 @@
+@import "fonts";
 @mixin border-radius($radius) {
   border-radius: $radius;
   -moz-border-radius:$radius;
@@ -16,3 +17,4 @@
   -o-box-shadow: $shadow;
   box-shadow: $shadow;
 }
+$btn-txt-color: #29323c;

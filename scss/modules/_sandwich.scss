@@ -1,11 +1,12 @@
 #nav-icon {
   width: 20px;
   height: 18px;
-  margin: 30px 22px;
   position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
+  float: right;
+  margin: 0 0 0 10px;
   span {
     display: inline-block;
     position: absolute;

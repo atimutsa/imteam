@@ -72,14 +72,14 @@ $(document).ready(function() {
             }
         },
 
-        showMenu: function(){
+        showMenu: function(e){
 
             var nav = $('header nav'),
                 icon = $('#nav-icon');
 
             icon.toggleClass('open');
             nav.slideToggle();
-
+            e.preventDefault();
         },
 
         getMore: function(e){
