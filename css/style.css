@@ -202,6 +202,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-style: normal;
   font-weight: normal;
 }
+/* font-family: "RobotoRegular"; */
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("/fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("/fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("/fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "RobotoLight"; */
+@font-face {
+  font-family: "RobotoLight";
+  src: url("/fonts/RobotoLight/RobotoLight.eot");
+  src: url("/fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("/fonts/RobotoLight/RobotoLight.woff") format("woff"), url("/fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "RobotoMedium"; */
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("/fonts/RobotoMedium/RobotoMedium.eot");
+  src: url("/fonts/RobotoMedium/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("/fonts/RobotoMedium/RobotoMedium.woff") format("woff"), url("/fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "RobotoBold"; */
+@font-face {
+  font-family: "RobotoBold";
+  src: url("/fonts/RobotoBold/RobotoBold.eot");
+  src: url("/fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("/fonts/RobotoBold/RobotoBold.woff") format("woff"), url("/fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 /* line 1, ../scss/layout/_sections.scss */
 #section1 {
   background: url("../img/header-bg.jpg") center 0 repeat fixed;
@@ -222,8 +254,8 @@ section {
 
 /* line 1, ../scss/modules/_sandwich.scss */
 #nav-icon {
+  height: 20px;
   width: 20px;
-  height: 18px;
   position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
@@ -231,7 +263,7 @@ section {
   float: right;
   margin: 0 0 0 10px;
 }
-/* line 10, ../scss/modules/_sandwich.scss */
+/* line 9, ../scss/modules/_sandwich.scss */
 #nav-icon span {
   display: inline-block;
   position: absolute;
@@ -244,52 +276,135 @@ section {
   transform: rotate(0deg);
   transition: .25s ease-in-out;
 }
-/* line 21, ../scss/modules/_sandwich.scss */
+/* line 20, ../scss/modules/_sandwich.scss */
 #nav-icon span:nth-child(1) {
-  top: 0px;
+  top: 0;
   transform-origin: left center;
 }
-/* line 25, ../scss/modules/_sandwich.scss */
+/* line 24, ../scss/modules/_sandwich.scss */
 #nav-icon span:nth-child(2) {
   top: 7px;
   transform-origin: left center;
 }
-/* line 29, ../scss/modules/_sandwich.scss */
+/* line 28, ../scss/modules/_sandwich.scss */
 #nav-icon span:nth-child(3) {
   top: 14px;
   transform-origin: left center;
 }
-/* line 36, ../scss/modules/_sandwich.scss */
+/* line 35, ../scss/modules/_sandwich.scss */
 #nav-icon.open span:nth-child(1) {
   transform: rotate(45deg);
-  top: 0px;
+  top: 2px;
   left: 3px;
 }
-/* line 41, ../scss/modules/_sandwich.scss */
+/* line 40, ../scss/modules/_sandwich.scss */
 #nav-icon.open span:nth-child(2) {
-  width: 0%;
+  width: 0;
   opacity: 0;
 }
-/* line 45, ../scss/modules/_sandwich.scss */
+/* line 44, ../scss/modules/_sandwich.scss */
 #nav-icon.open span:nth-child(3) {
   transform: rotate(-45deg);
-  top: 14px;
+  top: 16px;
   left: 3px;
 }
 
-/* line 4, ../scss/modules/_index.scss */
-.logo {
-  display: block;
-  background: url("../img/logo.png") center 0 no-repeat;
-  height: 46px;
-  width: 95px;
+/* line 1, ../scss/modules/_main_menu.scss */
+#main_menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  top: -100%;
+  z-index: 999;
+  transition: all linear .3s;
+  opacity: 1;
 }
-/* line 8, ../scss/modules/_index.scss */
-.logo.white {
-  background: url("../img/logo-white.png") center 0 no-repeat;
+/* line 10, ../scss/modules/_main_menu.scss */
+#main_menu.open {
+  top: 0;
+}
+/* line 13, ../scss/modules/_main_menu.scss */
+#main_menu .close {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  float: right;
+}
+/* line 21, ../scss/modules/_main_menu.scss */
+#main_menu .close span {
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+/* line 32, ../scss/modules/_main_menu.scss */
+#main_menu .close span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0;
+  left: 0;
+}
+/* line 37, ../scss/modules/_main_menu.scss */
+#main_menu .close span:nth-child(2) {
+  transform: rotate(-45deg);
+  top: 0;
+  left: 0;
 }
 
-/* line 12, ../scss/modules/_index.scss */
+/* line 16, ../scss/modules/_index.scss */
+.logo {
+  font: normal 16px/45px RobotoRegular, san-serif;
+  text-transform: uppercase;
+  height: 45px;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-decoration: none;
+  color: #29323c;
+}
+/* line 25, ../scss/modules/_index.scss */
+.logo .im {
+  display: inline-block;
+  background-color: #65bf95;
+  text-align: center;
+  height: 45px;
+  width: 45px;
+  color: #ffffff;
+  border-radius: 20%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 10px;
+  -webkit-transition: all linear 0.1s;
+  -moz-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+}
+/* line 39, ../scss/modules/_index.scss */
+.logo.transparent {
+  color: #ffffff;
+}
+/* line 41, ../scss/modules/_index.scss */
+.logo.transparent .im {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+/* line 46, ../scss/modules/_index.scss */
+.logo.transparent:hover .im {
+  color: #29323c;
+  background: #ffffff;
+}
+
+/* line 53, ../scss/modules/_index.scss */
 .menu {
   font: bold 14px "LatoBold", Arial, san-serif;
   color: #ffffff;
@@ -297,7 +412,7 @@ section {
   text-decoration: none;
 }
 
-/* line 18, ../scss/modules/_index.scss */
+/* line 59, ../scss/modules/_index.scss */
 .btn {
   border-radius: 21px;
   -moz-border-radius: 21px;
@@ -319,28 +434,28 @@ section {
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-/* line 32, ../scss/modules/_index.scss */
+/* line 73, ../scss/modules/_index.scss */
 .btn:hover {
   background: #000000;
   color: #ffffff;
 }
-/* line 36, ../scss/modules/_index.scss */
+/* line 77, ../scss/modules/_index.scss */
 .btn.white {
   color: #ffffff;
   border-color: #eeeeee;
 }
-/* line 39, ../scss/modules/_index.scss */
+/* line 80, ../scss/modules/_index.scss */
 .btn.white:hover {
   background: #ffffff;
   color: #29323c;
 }
 
-/* line 45, ../scss/modules/_index.scss */
+/* line 86, ../scss/modules/_index.scss */
 .center {
   text-align: center;
 }
 
-/* line 48, ../scss/modules/_index.scss */
+/* line 89, ../scss/modules/_index.scss */
 .scroll-down {
   height: 154px;
   width: 50px;
@@ -374,23 +489,33 @@ section {
 /* line 25, ../scss/style.scss */
 #section1 header .menu {
   float: right;
-  line-height: 46px;
+  line-height: 60px;
   right: 0;
 }
 /* line 30, ../scss/style.scss */
 #section1 header #nav-icon {
-  margin: 14px 0 0 10px;
+  margin: 21px 0 0 10px;
 }
-/* line 34, ../scss/style.scss */
+/* line 33, ../scss/style.scss */
+#section1 header .header_wrap {
+  display: block;
+  max-width: 1200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* line 41, ../scss/style.scss */
 #section1 .main-header {
   text-align: center;
   color: #ffffff;
-  font: 300 16px "OpenSansLight", Arial, san-serif;
+  font: 300 16px "RobotoRegular", Arial, san-serif;
   max-width: 630px;
   margin: 0 auto 0;
 }
-/* line 40, ../scss/style.scss */
+/* line 47, ../scss/style.scss */
 #section1 .main-header h1 {
-  font: bold 36px "LatoBold", Arial, san-serif;
+  font: bold 36px "RobotoBold", Arial, san-serif;
   margin-bottom: 30px;
 }

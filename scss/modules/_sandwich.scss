@@ -1,6 +1,5 @@
 #nav-icon {
-  width: 20px;
-  height: 18px;
+  @include size(20px);
   position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
@@ -19,7 +18,7 @@
     transform: rotate(0deg);
     transition: .25s ease-in-out;
     &:nth-child(1) {
-      top: 0px;
+      top: 0;
       transform-origin: left center;
     }
     &:nth-child(2) {
@@ -35,16 +34,16 @@
     span {
       &:nth-child(1) {
         transform: rotate(45deg);
-        top: 0px;
+        top: 2px;
         left: 3px;
       }
       &:nth-child(2) {
-        width: 0%;
+        width: 0;
         opacity: 0;
       }
       &:nth-child(3) {
         transform: rotate(-45deg);
-        top: 14px;
+        top: 16px;
         left: 3px;
       }
     }

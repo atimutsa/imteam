@@ -1,12 +1,53 @@
 @import "header";
 @import "sandwich";
+@import "main_menu";
 
+//.logo {
+//  display: block;
+//  background: url("../img/logo.png") center 0 no-repeat;
+//  @include size(136px 60px);
+//  &.white {
+//    background: url("../img/logo-white.png") center 0 no-repeat;
+//  }
+//  &.transparent {
+//    background: url("../img/logo-transparent") center 0 no-repeat;
+//  }
+//}
 .logo {
+  font: normal 16px/45px RobotoRegular, san-serif;
+  text-transform: uppercase;
+  @include size(auto 45px);
+  overflow: hidden;
+  white-space: nowrap;
   display: block;
-  background: url("../img/logo.png") center 0 no-repeat;
-  @include size(95px 46px);
-  &.white {
-    background: url("../img/logo-white.png") center 0 no-repeat;
+  text-decoration: none;
+  color: #29323c;
+  .im {
+    display: inline-block;
+    background-color: #65bf95;
+    text-align: center;
+    @include size(45px);
+    color: #ffffff;
+    border-radius: 20%;
+    @include box-sizing(border-box);
+    margin-right: 10px;
+    @include transition(all linear 0.1s);
+  }
+  .team {
+
+  }
+  &.transparent {
+    color: #ffffff;
+    .im {
+      background-color: transparent;
+      border: 1px solid #ffffff;
+    }
+    &:hover {
+      .im {
+        color: #29323c;
+        background: #ffffff;
+      }
+    }
   }
 }
 .menu {

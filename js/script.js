@@ -13,6 +13,7 @@ $(document).ready(function() {
 
         setUpListeners: function(){
             $(document).on('click', 'header .menu', this.showMenu);
+            $(document).on('click', 'nav .close', this.hideMenu);
             $(document).on('mouseenter', '.tooltipshow', this.showTooltip);
             $(document).on('mouseleave', '.tooltipshow', this.hideTooltip);
             $(window).scroll(this.showToTop);
@@ -24,6 +25,27 @@ $(document).ready(function() {
             $(document).on('click', '.toggle .ui.checkbox',this.countFilterChecked);
             $(document).on('click', '#filter .title',this.toggleOverflow);
             $(document).on('click', '#filter .bulleye',this.closeOverflow);
+        },
+
+        showMenu: function(e){
+            var nav = $('nav'),
+                icon = $('#nav-icon');
+
+            icon.toggleClass('open');
+            nav.addClass('open');
+            $.fn.pagepiling.setAllowScrolling(false);
+            $.fn.pagepiling.setKeyboardScrolling(false);
+            $('#pp-nav').hide();
+            e.preventDefault();
+        },
+
+        hideMenu: function(e){
+            var nav = $('nav');
+            nav.removeClass('open');
+            $('#pp-nav').show();
+            $.fn.pagepiling.setAllowScrolling(true);
+            $.fn.pagepiling.setKeyboardScrolling(true);
+            e.preventDefault();
         },
 
         closeOverflow: function(){
@@ -70,16 +92,6 @@ $(document).ready(function() {
             } else {
                 toTop.fadeOut();
             }
-        },
-
-        showMenu: function(e){
-
-            var nav = $('header nav'),
-                icon = $('#nav-icon');
-
-            icon.toggleClass('open');
-            nav.slideToggle();
-            e.preventDefault();
         },
 
         getMore: function(e){
